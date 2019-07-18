@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>戀人星座調查問卷</title>
+    <!-- 網頁標籤的名稱 -->
+
+    <link rel="icon" type="image/gif" href="star.gif" />
+    <!-- 標籤ICON，自己做的，但不太明顯QQ -->
+
+    <style type="text/css">
+        table {
+            border-width: 5px;
+            border-style: outset;
+            border-color: rgb(7, 26, 192);
+            font-family: Microsoft YaHei;
+            font-size: large;
+        }
+
+        td {
+            border-width: 2px;
+            border-style: solid;
+            border-color: rgba(37, 57, 236, 0.87);
+        }
+
+        /* 表格格式 */
+
+
+        body {
+            background-image: url("fabric.jpg");
+            background-size: contain;
+            width: 848px;
+        }
+
+
+
+        /* 背景格式 */
+
+        input[type="range"] {
+            width: 200px;
+            height: 16px;
+            outline: none;
+            background: none;
+        }
+
+        input[type="range"]::-moz-range-track {
+            height: 4px;
+            background: #edc;
+            border: none;
+        }
+
+        input[type="range"]::-moz-range-thumb {
+            width: 10px;
+            height: 10px;
+            background: #f22;
+            border: none;
+            border-radius: 50%;
+        }
+
+        input[type="range"]::-moz-range-thumb:hover,
+        input[type="range"]:active::-moz-range-thumb {
+            width: 16px;
+            height: 16px;
+        }
+
+        input[type="range"]::-moz-range-progress {
+            height: 4px;
+            background: rgb(9, 27, 196);
+        }
+
+        input[type="range"]::-moz-focus-outer {
+            border: none;
+            /* 去除 focus 時候的外框虛線 */
+        }
+
+        /* 拉條格式 */
+
+        #login_click {
+            margin-top: 32px;
+            height: 40px;
+        }
+
+        #login_click a {
+
+
+            text-decoration: none;
+            background: #562f5e;
+            color: #f2f2f2;
+
+            padding: 10px 30px 10px 30px;
+            font-size: 16px;
+            font-family: 微软雅黑, 宋体, Arial, Helvetica, Verdana, sans-serif;
+            font-weight: bold;
+            border-radius: 3px;
+
+            -webkit-transition: all linear 0.30s;
+            -moz-transition: all linear 0.30s;
+            transition: all linear 0.30s;
+
+        }
+
+        #login_click a:hover {
+            background: #385f9e;
+        }
+
+        /* 提交的格式 */
+
+        /* --------------------- 
+作者：崔小花o 
+来源：CSDN 
+原文：https://blog.csdn.net/u010037928/article/details/49660923 
+版权声明：本文为博主原创文章，转载请附上博文链接！ */
+
+        /* 提交格式 */
+    </style>
+</head>
+
+<body>
+    <h1>調查戀人彼此星座的問卷</h1>
+    <!-- 大標題 -->
+    <p>
+        <h3>不論過去或是現在，您是否有著心儀的他/她?</h3>
+    </p>
+    <p>
+        <h3>假如您對於星座十分<font size=5>熟悉</font>可直接往下作答</h3>
+    </p>
+    <p>
+        <h3>倘若您想重新了解，可藉由以下的圖連結至對應說明唷(源：占星之門)</h3>
+    </p>
+    <!-- 前言。這裡就衷心佩服各位很會寫文案的大大 -->
+
+    <p><img src="TwelveConstellations.jpg" alt="" usemap="#Constellations">
+        <map name="Constellations">
+            <area target="_blank" alt="" title="牡羊座" href="https://astrodoor.cc/keyword/sign/aries.jsp"
+                coords="2,7,210,196" shape="rect">
+            <area target="_blank" alt="" title="金牛座" href="https://astrodoor.cc/keyword/sign/taurus.jsp"
+                coords="215,6,423,195" shape="rect">
+            <area target="_blank" alt="" title="雙子座" href="https://astrodoor.cc/keyword/sign/gemini.jsp"
+                coords="432,5,640,194" shape="rect">
+            <area target="_blank" alt="" title="巨蟹座" href="https://astrodoor.cc/keyword/sign/cancer.jsp"
+                coords="636,6,844,195" shape="rect">
+            <area target="_blank" alt="" title="獅子座" href="https://astrodoor.cc/keyword/sign/leo.jsp"
+                coords="5,213,213,402" shape="rect">
+            <area target="_blank" alt="" title="處女座" href="https://astrodoor.cc/keyword/sign/virgo.jsp"
+                coords="218,212,417,404" shape="rect">
+            <area target="_blank" alt="" title="天秤座" href="https://astrodoor.cc/keyword/sign/libra.jsp"
+                coords="425,212,633,408" shape="rect">
+            <area target="_blank" alt="" title="天蠍座" href="https://astrodoor.cc/keyword/sign/scorpio.jsp"
+                coords="639,213,833,405" shape="rect">
+            <area target="_blank" alt="" title="射手座" href="https://astrodoor.cc/keyword/sign/sagittarius.jsp"
+                coords="6,419,209,616" shape="rect">
+            <area target="_blank" alt="" title="魔羯座" href="https://astrodoor.cc/keyword/sign/capricorn.jsp"
+                coords="213,420,419,613" shape="rect">
+            <area target="_blank" alt="" title="水瓶座" href="https://astrodoor.cc/keyword/sign/aquarius.jsp"
+                coords="426,422,629,614" shape="rect">
+            <area target="_blank" alt="" title="雙魚座" href="https://astrodoor.cc/keyword/sign/pisces.jsp"
+                coords="637,422,838,613" shape="rect">
+        </map>
+    </p>
+    <!-- 插入星座圖，連結到相關介紹。圖源：https://www.soeasyedu.com.tw/blog/online-learning/2018/03/twelve-constellations
+    連結源：https://astrodoor.cc/index.jsp -->
+
+    <form>
+        <!-- 建表單 -->
+        <table>
+            <!-- 由於要問兩個人，想用表格排版 -->
+            <tr>
+                <td>
+                    <label for="userName"> 您的名字：</label>
+                    <input type="text" name="userName" id="userName">
+                </td>
+                <td>
+                    <label for="loverName"> 對方的名字：</label>
+                    <input type="text" name="loverName" id="loverName">
+                </td>
+            </tr>
+            <!-- 名字是基本 -->
+            <tr>
+                <td>
+                    <label for=""> 您的性別：</label>
+                    <input type="radio" name="userSex" id="userMale">
+                    <label for="userMale">男</label>
+                    <input type="radio" name="userSex" id="userFemale">
+                    <label for="userFemale">女</label>
+                </td>
+                <td>
+                    <label for=""> 對方的性別：</label>
+                    <input type="radio" name="loverSex" id="loverMale">
+                    <label for="loverMale">男</label>
+                    <input type="radio" name="loverSex" id="loverFemale">
+                    <label for="loverFemale">女</label>
+                </td>
+            </tr>
+            <!-- 就是想問性別 -->
+            <tr>
+                <td colspan="2" align="center"> <b>沒錯!性別就是要分開勾</b></td>
+            </tr>
+            <tr>
+                <td>
+                    您的興趣：
+                    <input type="checkbox" name="userHobby" id="userBook">
+                    <label for="userBook">看書</label>
+                    <input type="checkbox" name="userHobby" id="userMovie">
+                    <label for="userMovie">看電影</label>
+                    <input type="checkbox" name="userHobby" id="userSport">
+                    <label for="userSport">運動</label>
+                    <input type="checkbox" name="userHobby" id="userGame">
+                    <label for="userGame">電玩</label>
+                    <input type="checkbox" name="userHobby" id="userMakeup">
+                    <label for="userMakeup">化妝</label>
+                    <input type="checkbox" name="userHobby" id="userProgram">
+                    <label for="userProgram">寫程式</label>
+                </td>
+                <td>
+                    對方的興趣：
+                    <input type="checkbox" name="loverHobby" id="loverBook">
+                    <label for="loverBook">看書</label>
+                    <input type="checkbox" name="loverHobby" id="loverMovie">
+                    <label for="loverMovie">看電影</label>
+                    <input type="checkbox" name="loverHobby" id="loverSport">
+                    <label for="loverSport">運動</label>
+                    <input type="checkbox" name="loverHobby" id="loverGame">
+                    <label for="loverGame">電玩</label>
+                    <input type="checkbox" name="loverHobby" id="loverMakeup">
+                    <label for="loverMakeup">化妝</label>
+                    <input type="checkbox" name="loverHobby" id="loverProgram">
+                    <label for="loverProgram">寫程式</label>
+                </td>
+            </tr>
+            <!-- 就只想得到這些興趣了 -->
+            <tr>
+                <td>您的星座：
+                    <select name="userConstellations" id="">
+                        <option value="userAries">牡羊座</option>
+                        <option value="userTaurus">金牛座</option>
+                        <option value="userGemini">雙子座</option>
+                        <option value="userCancer">巨蟹座</option>
+                        <option value="userLeo">獅子座</option>
+                        <option value="userVirgo">處女座</option>
+                        <option value="userLibra">天秤座</option>
+                        <option value="userScorpio">天蠍座</option>
+                        <option value="userSagittarius">射手座</option>
+                        <option value="userCapricorn">摩羯座</option>
+                        <option value="userAquarius">水瓶座</option>
+                        <option value="userPisces">雙魚座</option>
+                    </select>
+                </td>
+                <td>對方的星座：
+                    <select name="loverConstellations" id="">
+                        <option value="loverAries">牡羊座</option>
+                        <option value="loverTaurus">金牛座</option>
+                        <option value="loverGemini">雙子座</option>
+                        <option value="loverCancer">巨蟹座</option>
+                        <option value="loverLeo">獅子座</option>
+                        <option value="loverVirgo">處女座</option>
+                        <option value="loverLibra">天秤座</option>
+                        <option value="loverScorpio">天蠍座</option>
+                        <option value="loverSagittarius">射手座</option>
+                        <option value="loverCapricorn">摩羯座</option>
+                        <option value="loverAquarius">水瓶座</option>
+                        <option value="loverPisces">雙魚座</option>
+                    </select>
+                </td>
+            </tr>
+            <!-- 重頭戲，星座不完全照日期排，但想照上面圖的順序 -->
+            <tr>
+                <td colspan="2"> 您認為的匹配指數 0~100：
+                    <input id="range" type="range" min="0" max="100" value="50" step="1"
+                        oninput="change()" onchange="change()">
+                    <span id="value">50</span>
+                    <script type='text/javascript'>
+                        function change() {
+                            var value = document.getElementById('range').value;
+                            document.getElementById('value').innerHTML = value;
+                        }
+                    </script>
+                </td>
+            </tr>
+
+        </table>
+<!-- 以上為所有表格 -->
+        
+        <div id="login_click">
+            <a id="btlogin" href="#">交卷啦</a>
+        </div>
+        <!-- 假掰的提交 -->
+
+
+    </form>
+
+    <!-- HTML5 新增了許多 <input> 的型態，請使用這些type，設計一份問卷 -->
+    <!-- http://www.w3schools.com/html/html_form_input_types.asp -->
+
+    <!-- 如果不知道該怎麼下手，請參考這個網站所設計的情境問卷找靈感 -->
+    <!-- https://technews.tw/2018/10/18/surveycake-situation-list/ -->
+
+    <!-- 底下是作業需要包含的項目 -->
+    <!-- 1. 問卷需包含 5-7 個問題 -->
+    <!-- 2. type 挑選時，請盡量不重複 -->
+    <!-- 3. 挑選 至少 1 個問題，設置 pattern 檢核 -->
+
+</body>
+
+</html>
